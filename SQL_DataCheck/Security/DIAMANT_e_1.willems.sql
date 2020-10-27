@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [DIAMANT\e.willems]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [Français];
+

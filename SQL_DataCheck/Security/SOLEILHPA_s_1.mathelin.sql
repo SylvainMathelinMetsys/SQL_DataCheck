@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [SOLEILHPA\s.mathelin]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [Français];
+

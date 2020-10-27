@@ -14,7 +14,7 @@
     </RootPath>
     <RootNamespace>SQL_DataCheck</RootNamespace>
     <AssemblyName>SQL_DataCheck</AssemblyName>
-    <ModelCollation>1033, CI</ModelCollation>
+    <ModelCollation>1036,CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>French_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -57,5 +59,48 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="technique\" />
+    <Folder Include="technique\Tables\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="technique\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="technique\Tables\DataCheck_log.sql" />
+    <Build Include="technique\Tables\LOGICIEL.sql" />
+    <Build Include="technique\Tables\SAUV_Measures.sql" />
+    <Build Include="technique\Tables\volumes_DATALYS_TURNOVER.sql" />
+    <Build Include="technique\Tables\DATASELECT_Details.sql" />
+    <Build Include="technique\Tables\Check_Results.sql" />
+    <Build Include="technique\Tables\Controls.sql" />
+    <Build Include="technique\Tables\Measures.sql" />
+    <Build Include="dbo\Views\V_Controle_DMT_ODS.sql" />
+    <Build Include="dbo\Views\V_Controle_ODS_Source.sql" />
+    <Build Include="Security\jpbo.sql" />
+    <Build Include="Security\SOLEILHPA_jp.bonnicel.sql" />
+    <Build Include="Security\DIAMANT_e.willems.sql" />
+    <Build Include="Security\DIAMANT_e_1.willems.sql" />
+    <Build Include="Security\SOLEILHPA_s.mathelin.sql" />
+    <Build Include="Security\SOLEILHPA_s_1.mathelin.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_ODS_DATALYS_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_ODS_DATALYS_PAYMENT.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_STAGING_ESEASON_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_controle_ALL.sql" />
+    <Build Include="technique\Stored Procedures\SAUV_spu_controle_FAITS_CA_NUIT_1.sql" />
+    <Build Include="technique\Stored Procedures\spu_Update_Statistics_All_Tables.sql" />
+    <Build Include="technique\Stored Procedures\spu_controle_DATALYS_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_controle_send_mail.sql" />
+    <Build Include="technique\Stored Procedures\spu_Insert_ODS_DATALYS_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_STAGING_HAPIPRO_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_ODS_DATALYS_TURNOVER_forDMT.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_ODS_DSIS_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_ODS_HAPIPRO_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_ODS_ESEASON_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_controle_ODS.sql" />
+    <Build Include="technique\Stored Procedures\spu_controle_INIT.sql" />
+    <Build Include="technique\Stored Procedures\spu_Data_DTM_ALL_TURNOVER.sql" />
+    <Build Include="technique\Stored Procedures\spu_controle_ALL_.sql" />
+    <Build Include="Security\technique.sql" />
   </ItemGroup>
 </Project>

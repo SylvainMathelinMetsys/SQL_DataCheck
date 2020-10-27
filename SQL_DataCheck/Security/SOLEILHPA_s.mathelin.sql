@@ -1,0 +1,2 @@
+﻿CREATE USER [SOLEILHPA\s.mathelin] FOR LOGIN [SOLEILHPA\s.mathelin];
+

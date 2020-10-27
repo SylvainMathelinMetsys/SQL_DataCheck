@@ -1,0 +1,19 @@
+﻿CREATE TABLE [technique].[LOGICIEL] (
+    [LOG_PK]                        INT           NOT NULL,
+    [LOG_NOM_OUTIL]                 VARCHAR (50)  NULL,
+    [LOG_NOM_APPLICATION]           VARCHAR (100) NULL,
+    [LOG_CONN_IDENTIFIANT]          VARCHAR (30)  NULL,
+    [LOG_CONN_MOT_DE_PASSE]         VARCHAR (50)  NULL,
+    [LOG_CONN_SERVEUR]              VARCHAR (30)  NULL,
+    [LOG_CONN_PORT]                 VARCHAR (30)  NULL,
+    [LOG_NOM_BASE]                  VARCHAR (30)  NULL,
+    [LOG_NOM_SCHEMA]                VARCHAR (30)  NULL,
+    [LOG_CONN_FOURNISSEUR]          VARCHAR (100) NULL,
+    [LOG_CONN_PARAM_COMPLEMENTAIRE] VARCHAR (800) NULL,
+    [LOG_DATE_CREATION]             DATETIME      NULL,
+    [LOG_DATE_MODIFICATION]         DATETIME      NULL,
+    [LOG_ACTIF]                     BIT           CONSTRAINT [DF__LOGICIEL__ACTIF__251C81ED] DEFAULT ((1)) NOT NULL,
+    [LOG_INVISIBLE]                 BIT           CONSTRAINT [DF__LOGICIEL__INVISI__2610A626] DEFAULT ((1)) NOT NULL,
+    CONSTRAINT [PK_LOGICIEL] PRIMARY KEY CLUSTERED ([LOG_PK] ASC)
+);
+
